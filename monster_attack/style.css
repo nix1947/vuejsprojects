@@ -1,0 +1,54 @@
+body {
+    margin: 100px auto;
+}
+
+
+.health-bar {
+    width: 100%;
+    background-color: green;
+    height: 40px;
+}
+
+.start-game {
+    border-radius: 1px solid #888888;
+    background: #cbcbcb;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+}
+
+.start-game > button {
+    display: inline;
+    text-align: center !important;
+}
+
+.activity-log {
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.activity-log > ul {
+    list-style: none;
+    box-shadow: gainsboro;
+}
+
+.activity-log > ul > li:nth-child(odd) {
+    background: bisque;
+    color: green;
+    text-transform: uppercase;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.activity-log > ul > li:nth-child(even) {
+    background: goldenrod;
+    color: gainsboro;
+    text-transform: uppercase;
+    padding: 2px;
+    margin-bottom: 10px;
+}
