@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monster attack</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body >
+<div id="app">
+    <h1>{{title}}</h1>
+    <button @click="destroy">Destroy</button>
+    <button @click="updateTitle">Update title</button>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            title: "The vuejs tutorial"
+        },
+        // beforCreate lifecycle
+        beforeCreate: function () {
+            console.log("beforeCreate()");
+        },
+        // Created lifecycle
+        created: function () {
+            console.log("created()");
+        },
+        // beforMount
+        beforeMount: function () {
+            console.log("BefomreMount()");
+        },
+        // mounted
+        mounted: function () {
+            console.log("mounted()");
+        },
+        beforeUpdate: function () {
+            console.log("before update");
+        },
+        updated: function () {
+            console.log("Updated()");
+        },
+        beforeDestroy: function () {
+            console.log('beforeDestory');
+        },
+        destroyed: function () {
+            console.log("Destroyed");
+        },
+        methods: {
+            destroy: function () {
+                this.$destroy(); // destroy this instance.
+            },
+            updateTitle: function () {
+                this.title = "hello world"
+            }
+        }
+    });
+</script>
+</body>
+</html>
